@@ -16,15 +16,19 @@ var sepet =
 
 function getPriceToBasket()
 {
+	//Prompt ile verileri alma:
 	var pName = prompt("Ürün ismi giriniz:");
 	var pPrice = parseInt(prompt("Ürün fiyatı giriniz:"));
-	/*var newObject = 
+	/*Sepet dizisine ekleme yapmak için bir yöntem:
+	var newObject = 
 	{
 		name: pName,
 		price: pPrice
 	}
 	sepet.push(newObject);
 	*/
+
+	//diğer yöntem:
 	sepet.push({name : pName, price: pPrice});
 }
 
@@ -48,10 +52,14 @@ function printToHTML()
 	});
 }
 
+//Ekle butonu alınır:
 var btnEkle = document.getElementById("ekle");
 
+//Ekle butonu için click olayı:
 btnEkle.addEventListener('click', function()
 {
+	//Prompt ile verileri çekip sepete ekleyen fonksiyonu çağırma:
 	getPriceToBasket();
+	//Güncel sepeti HTML'e yazdıran fonksiyonu çağırma:
 	printToHTML();
 });
