@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Hesap Makinesi</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="formDiv">
+				<!--İşlemlerin yürütüleceği bir form açılır: -->
+				<form id="frmCalculator">
+					<!--İşleme alınacak ilk sayı için bir input elementi eklenecek: -->
+					<div>
+						<input type="number" name="nm" value="0">
+						<!--Aritmetik işlemleri yapacak butonlar eklenir: -->
+						<button id="btnAdd">+</button>
+						<button id="btnSub">-</button>
+					</div>
+					<!--İşleme alınacak ikinci sayı için bir input elementi eklenecek: -->
+					<div>
+						<input type="number" name="nm" value="1">
+						<!--Aritmetik işlemleri yapacak butonlar eklenir: -->
+						<button id="btnMul">*</button>
+						<button id="btnDiv">/</button>
+					</div>
+				</form>
+			</div> <!--End of .formDiv -->
+			<div id="pResult">Result =</div>
+			<div class="divHistory">
+				<h2>History List</h2>
+				<ul id="listHistory">
+				</ul>
+			</div> <!-- End of .divHistory-->
+		</div> <!--End of .container -->
+		<!--JS dosyaları sayfaya yüklenir: -->
+		<script type="text/javascript" src="jquery_min.js"></script>
+		<script type="text/javascript" src="calculator.js"></script>
+	</body>
+</html>

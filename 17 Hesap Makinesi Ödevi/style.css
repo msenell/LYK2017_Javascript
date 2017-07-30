@@ -1,0 +1,101 @@
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('font/DS-DIGI.ttf');
+ src: url('font/DS-DIGIB.ttf');
+ src: url('font/DS-DIGII.ttf');
+ src: url('font/DS-DIGIT.ttf');
+
+}
+
+.clear
+{
+	clear : both;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body
+{
+	background-color: #FFD3A8;
+}
+
+.container
+{
+	width: 500px;
+	margin: 170px auto 0;
+}
+
+
+form
+{
+	text-align: center;
+	border-bottom: 3px solid #163D8F;
+	padding: 10px;
+	padding-bottom: 20px;
+}
+
+form > div
+{
+	margin-top: 10px;
+}
+
+input
+{
+	height: 40px;
+	font-size: 30px;
+	color: #163D8F;
+	background-color: #DEB6FA;
+	font-family: 'digital-clock-font';
+	font-weight: 700;
+	border-radius: 1px solid #163D8F;
+	border-radius: 5px;
+}
+
+#btnAdd, #btnSub, #btnMul, #btnDiv
+{
+	border-radius: 5px;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #163D8F;
+}
+
+button:hover
+{
+	color: #DEB6FA !important;
+	background-color: #163D8F;
+	transition-duration : 0.5s;
+	-webkit-transition-duration : 0.5s;
+	-moz-transition-duration : 0.5s;
+
+}
+
+#pResult
+{
+	border-radius: 5px;
+	margin-top: 5px;
+	font-size: 30px;
+	background-color: #DEB6FA;
+	color: #163D8F;
+	font-family: 'digital-clock-font';
+}
+
+.divHistory
+{
+	border-radius: 10px;
+	text-align: center;
+	font-size: 30px;
+	background-color: #DEB6FA;
+	color: #163D8F;
+	font-family: 'digital-clock-font';
+}
+
+ul
+{
+	list-style-type: none;
+}
