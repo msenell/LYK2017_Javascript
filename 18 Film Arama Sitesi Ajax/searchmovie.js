@@ -22,26 +22,32 @@ function printMoviesToHTML(response)
 	{
 		//Her bir film objesi 'movie' parametresi ile yakalanır:
 		//Filmin içindeki 'Title', 'Year', 'imdbID', 'Type' ve 'Poster' bilgileri HTML içine eklenir:
-		listResult.append
-		(
-			"<li>" +
-				movie.Title +
-				"<ul>" +
-				"<li>" +
-					movie.Year +
-				"</li>" +
-				"<li>" +
-					movie.imdbID +
-				"</li>" +
-				"<li>" +
-					movie.Type +
-				"</li>" +
-				"<li>" +
+		var movieCard = 
+			"<div>" +
+				"<div class = 'divPoster'>" +
 					"<img src='" + movie.Poster + "'>" +
-				"</li>" +
-				"</ul>" +
-			"</li>"
-		);
+				"</div>" +
+				"<div class = 'divInfo'>" +
+					"<h2>" + movie.Title + "</h2>" +
+					"<table>" +
+						"<tr>" + 
+							"<td>Yıl:</td>" + 
+							"<td>" + movie.Year + "</td>" +
+						"</tr>" +
+						"<tr>" + 
+							"<td>Tür:</td>" + 
+							"<td>" +  movie.Type + "</td>" +
+						"</tr>" +
+						"<tr>" + 
+							"<td>IMDb:</td>" + 
+							"<td>" +  "<a href='http://www.imdb.com/title/" + movie.imdbID + "' target= '_blank'>" + "http://www.imdb.com/title/" + movie.imdbID + "</a>" + "</td>" +
+						"</tr>" +
+					"</table>" +
+				"</div>" +
+				"<div class='clear'></div>" +
+			"</div>";
+
+		listResult.append("<li>" + movieCard + "</li>");
 	});
 }
 

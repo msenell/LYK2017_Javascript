@@ -3,17 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Film Arama Sitesi</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<div class="divSearchForm">
-			<form id="frmSearch">
-				<input type="text" name="txtSearch">
-				<button id=btnSearch>Ara</button>
-			</form>
-		</div> <!-- End of .divSearchForm -->
-		<div id="divResult">
-			<ul id=listResult></ul>
-		</div> <!-- End of #divResult -->
+		<div class="container">
+			<div class="divSearchForm">
+				<h1>Film Arama:</h1>
+				<form id="frmSearch">
+					<input type="text" name="txtSearch">
+					<button id=btnSearch>Ara</button>
+				</form>
+			</div> <!-- End of .divSearchForm -->
+			<div id="divResult">
+				<ul id=listResult></ul>
+			</div> <!-- End of #divResult -->
+		</div> <!--End of .container -->
 		<script type="text/javascript" src="jquery_min.js"></script>
 		<script type="text/javascript" src="searchmovie.js"></script>
 	</body>

@@ -1,0 +1,88 @@
+ @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+.clear
+{
+	clear: both;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body
+{
+	background-color: #D6C6B5;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container
+{
+	width: 550px;
+	margin: 50px auto 0px;
+}
+
+form input
+{
+	width: 400px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+#btnSearch
+{
+	width: 50px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+ul > li > div
+{
+	border : 1px solid gray;
+	margin-top: 5px;
+	background-color: #4A443E;
+	border-radius: 7px;
+}
+
+#listResult
+{
+	list-style-type: none;
+	padding: 0px;
+}
+
+.divPoster
+{
+	width: 100px;
+	float: left;
+}
+
+.divPoster img 
+{
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+.divInfo
+{
+	float: left;
+	padding-left: 10px;
+}
+
+.divInfo h2
+{
+	color: #968B7F;
+	border-bottom: 1px solid #968B7F;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.divInfo td
+{
+	margin: 0px;
+	color: #D6C6B5;
+}
+
+td a
+{
+	color: yellow;
+}
