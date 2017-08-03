@@ -4,7 +4,7 @@ var searchKey = null;
 //1. kısım sonuna aranacak kelime eklenecek:
 var urlAPI = 'http://www.omdbapi.com/?s=';
 //2. kısım aranacak kelimeden sonra eklenecek:
-var apiKey = "&apikey=ec6483bd";
+var apiKey = "&apikey=c6c0355";
 
 //HTML tarafından getirilecek input elementi:
 var txtSearch = $('input[name=txtSearch]')[0];
