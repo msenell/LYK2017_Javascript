@@ -28,7 +28,7 @@ function printMoviesToHTML(response)
 					"<img src='" + movie.Poster + "'>" +
 				"</div>" +
 				"<div class = 'divInfo'>" +
-					"<h2>" + movie.Title + "</h2>" +
+					"<h2 imdb-id='" + movie.imdbID + "' name='movie-title'>" + movie.Title + "</h2>" +
 					"<table>" +
 						"<tr>" + 
 							"<td>Yıl:</td>" + 

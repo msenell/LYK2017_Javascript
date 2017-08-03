@@ -14,11 +14,53 @@
 					<button id=btnSearch>Ara</button>
 				</form>
 			</div> <!-- End of .divSearchForm -->
-			<div id="divResult">
-				<ul id=listResult></ul>
-			</div> <!-- End of #divResult -->
+			<div class="divSearchSide">
+				<div id="divResult">
+					<ul id=listResult></ul>
+				</div> <!-- End of #divResult -->
+			</div> <!--End of .divSearchSide-->
+			<div class="divDetailSide">
+				<div class="title">
+			<h1 id="movieTitle"></h1>
+			<p id="subTitle"></p>
+			</div> <!--End of .title -->
+			<div class="shortInfo">
+				<div id="divPoster">
+					<!--Buraya js ile poster eklenecek -->
+				</div> <!-- End of .divPoster-->
+				<div class="divInfo">
+					<table id="tblCountry" cellpadding="0s">
+					<!-- Buraya js ile tek satır 2 sütun eklenecek. Ülke ve dil bilgisi yazdırılacak. -->
+					</table>
+					<p id="pRelease"></p>
+					<p id="pPlot"></p>
+					<p id="pDirector"></p>
+					<p id="pWriter"></p>
+				</div>
+				<div class="clear"></div>
+			</div> <!-- End of .shortInfo -->
+			<div id="divRatings">
+				<h3>Değerlendirmeler:</h3>
+				<table id="tblRatings">
+					<!--Buraya Ratings sonuçları basılacak. Her satırda 2 sütun olacak. -->
+				</table> <!-- End of .tblRatings -->
+			</div> <!-- End of .divRatings-->
+			<p id="pMetascore"></p>
+			<p id="pAwards"></p>
+			<div class="divPeople">
+				<p id="pActors"></p>
+			</div> <!-- End of .divPeople -->
+			<div class="footer">
+				<table id="tblLast">
+					<!--Tek satır 3 sütun eklenecek. JS ile DVD, BoxOffice ve Production bilgisi eklenecek -->
+				</table>
+				<p id="pWebsite"></p>
+			</div> <!--End of .footer -->
+
+			</div><!--End of .divDetailSide-->
 		</div> <!--End of .container -->
 		<script type="text/javascript" src="jquery_min.js"></script>
 		<script type="text/javascript" src="searchmovie.js"></script>
+		<script type="text/javascript" src="detail.js"></script>
 	</body>
 </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue JS</title>
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			{{ count }}
+			<button v-on:click="inc">+</button>
+			<button v-on:click="dec" :disabled="count === 0">-</button>
+			<div v-if="count === 0">
+				Sayı Sıfıra Eşit
+			</div>
+			<script src="https://unpkg.com/vue"></script>
+			<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>

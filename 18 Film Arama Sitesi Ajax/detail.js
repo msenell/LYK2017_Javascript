@@ -2,11 +2,20 @@ var imdbID = "tt0060315";
 var url1 = "http://www.omdbapi.com/?i=";
 var url2 = "&apikey=c6c0355";
 
-$.ajax(
-{
-	url: url1 + imdbID + url2,
-	method: "GET"
-}).then(printDetailsToHTML);
+$(document).click(function(event)
+	{
+		var clickedTitle = $(event.target);
+		if(clickedTitle.attr('name') === "movie-title")
+		{
+			console.log(clickedTitle);
+			imdbID = clickedTitle.attr('imdb-id');
+			$.ajax(
+				{
+					url: url1 + imdbID + url2,
+					method: "GET"
+				}).then(printDetailsToHTML);
+		}
+	});
 
 function printDetailsToHTML(response)
 {
