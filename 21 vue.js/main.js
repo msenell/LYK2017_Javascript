@@ -5,7 +5,19 @@ var app = new Vue
 		data: 
 			{
 				message: 'Hello Vue!',
-				count: 0
+				count: 0,
+				visible: true,
+				posts: 
+					[
+						{
+							id: 0,
+							title: "Hello"
+						},
+						{
+							id: 1,
+							title: "World"
+						}
+					]
 			},
 		methods:
 			{
@@ -16,6 +28,10 @@ var app = new Vue
 				dec: function()
 					{
 						this.count = this.count - 1;
+					},
+				func: function(item)
+					{
+						console.log(item);
 					}
 			}
 	}

@@ -5,6 +5,11 @@
 	clear: both;
 }
 
+img
+{
+	max-width: 100%;
+}
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -17,6 +22,11 @@ body
     font-family: 'Ubuntu', sans-serif;
 }
 
+.container
+{
+	width: 100%;
+}
+
 .container::after
 {
 	clear: both;
@@ -25,16 +35,18 @@ body
 .divSearchSide
 {
 	float: left;
+	width: 35%;
 }
 
 .divDetailSide
 {
+	width: 60%;
 	float: right;
 }
 
 form input
 {
-	width: 400px;
+	width: 40%;
 	height: 30px;
 	border-radius: 5px;
 }
@@ -56,13 +68,14 @@ ul > li > div
 
 #listResult
 {
+	width: 100%;
 	list-style-type: none;
 	padding: 0px;
 }
 
 .divPoster
 {
-	width: 100px;
+	width: 20%;
 	float: left;
 }
 
@@ -94,5 +107,37 @@ ul > li > div
 
 td a
 {
+	font-size: 15px;
 	color: yellow;
+}
+
+/* Detail sayfası */
+
+#divDetailPoster
+{
+	width: 20%;
+	float: left;
+}
+
+.divDetailInfo
+{
+	width: 75%;
+	float: left;
+	margin-left: 10px;
+}
+
+h3
+{
+	margin: 0px;
+}
+
+#tblRatings
+{
+	width: 100%;
+}
+
+#pWebsite
+{
+	width: 100%;
+	text-align: center;
 }

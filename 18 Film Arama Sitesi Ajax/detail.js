@@ -14,16 +14,17 @@ $(document).click(function(event)
 					url: url1 + imdbID + url2,
 					method: "GET"
 				}).then(printDetailsToHTML);
+			console.log(url1 + imdbID + url2);
 		}
 	});
 
 function printDetailsToHTML(response)
 {
-	$("#movieTitle").append(response.Title);
-	$("#subTitle").append(response.Type + ", " + response.Year + ", " + response.Genre + ", " + response.Runtime);
-	$("#divPoster").html("<img src='" + response.Poster + "'>");
-	$("#pRelease").append("Released: " + response.Released);
-	$("#pPlot").append(response.Plot);
+	$("#movieTitle").html(response.Title);
+	$("#subTitle").html(response.Type + ", " + response.Year + ", " + response.Genre + ", " + response.Runtime);
+	$("#divDetailPoster").html("<img src='" + response.Poster + "'>");
+	$("#pRelease").html("Released: " + response.Released);
+	$("#pPlot").html(response.Plot);
 	var tblRatings = $("#tblRatings");
 
 	var tblStr = "<tr>"+
@@ -37,12 +38,12 @@ function printDetailsToHTML(response)
 	tblStr = tblStr + "</tr>";
 	tblRatings.html(tblStr);
 	
-	$("#pMetascore").append("Metascore: " + response.Metascore);
-	$("#pAwards").append("Awards: " + response.Awards);
+	$("#pMetascore").html("Metascore: " + response.Metascore);
+	$("#pAwards").html("Awards: " + response.Awards);
 	$("#tblCountry").html("<tr><td>Ülke : " + response.Country + "</td><td>Dil : " + response.Language + "</td></tr>");
-	$("#pDirector").append("Yönetmen : " + response.Director);
-	$("#pWriter").append("Yazar : " + response.Writer);
-	$("#pActors").append("Oyuncular : " + response.Actors);
+	$("#pDirector").html("Yönetmen : " + response.Director);
+	$("#pWriter").html("Yazar : " + response.Writer);
+	$("#pActors").html("Oyuncular : " + response.Actors);
 	$("#tblLast").html(
 		"<tr>" +
 		"<td>DVD : " + response.DVD + "</td>" + 

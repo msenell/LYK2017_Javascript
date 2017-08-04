@@ -3,15 +3,27 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Vue JS</title>
+		<style>
+			[v-cloak]
+			{
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="app" v-cloak>
 			{{ count }}
 			<button v-on:click="inc">+</button>
 			<button v-on:click="dec" :disabled="count === 0">-</button>
-			<div v-if="count === 0">
+			<div v-if="visible">
 				Sayı Sıfıra Eşit
 			</div>
+			<ul>
+				<li v-for="item in posts">
+					<button v-on:click="func(item)">+</button>{{ item.title }}
+				</li>
+			</ul>
+		</div>
 			<script src="https://unpkg.com/vue"></script>
 			<script type="text/javascript" src="main.js"></script>
 	</body>

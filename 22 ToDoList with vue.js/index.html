@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ToDo List with Vue.JS</title>
+		<style>
+			[v-cloak]
+			{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<h2>Add New To-Do</h2>
+			<!-- .prevent = preventDefault() -->
+			<form v-on:submit.prevent="addNewToDo">
+				<input type="text" v-model="title">
+				<button>Add</button>
+			</form>
+			<h2>To-Do List</h2>
+			<ul v-for="item in todos" v-if="!item.done">
+				<li><button v-on:click="toggleDone(item)">+</button>{{ item.title }}</li>
+			</ul>
+			<h2>Done List</h2>
+			<ul v-for="item in todos" v-if="item.done">
+				<li><button v-on:click="toggleDone(item)">+</button>{{ item.title }}</li>
+			</ul>
+		</div> <!--End of .app -->
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
