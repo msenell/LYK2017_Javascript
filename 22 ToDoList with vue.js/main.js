@@ -35,6 +35,13 @@ var app = new Vue
 						}
 					]
 			},
+		created : function()
+		{
+			var _todos = localStorage.getItem("todos");
+			this.todos = _todos === null ? [] : JSON.parse(_todos);
+			var _last_id = localStorage.getItem("last_id");
+			this.last_id = _last_id === null ? 0 : parseInt(_last_id);
+		},
 		methods: 
 			{
 				toggleDone: function(todo)
@@ -49,6 +56,7 @@ var app = new Vue
 						}
 						return obj;
 					});
+					this.updateStorage();
 
 				},
 				addNewToDo: function()
@@ -63,6 +71,29 @@ var app = new Vue
 					}
 					);
 					this.title = "";
+					this.updateStorage();
+				},
+				removeToDo: function(todo)
+				{
+					this.todos = this.todos.filter(function(item)
+					{
+						return todo.id !== item.id;
+					});
+					this.updateStorage();
+				},
+				clearDone: function()
+				{
+					this.todos.filter(function(item)
+					{
+						return !item.done;
+					});
+					this.updateStorage();
+				},
+				//Veriler Local Storage'a kaydedilir:
+				updateStorage: function()
+				{
+					localStorage.setItem("todos", JSON.stringify(this.todos));
+					localStorage.setItem("last_id", this.last_id);
 				}				
 			}
 	}

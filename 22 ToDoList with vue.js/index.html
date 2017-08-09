@@ -15,7 +15,8 @@
 			<!-- .prevent = preventDefault() -->
 			<form v-on:submit.prevent="addNewToDo">
 				<input type="text" v-model="title">
-				<button>Add</button>
+				<!--İnput içi boş iken ekleme yapmasını engellemek için :disabled eklenir: -->
+				<button :disabled="title===''">Add</button>
 			</form>
 			<h2>To-Do List</h2>
 			<ul v-for="item in todos" v-if="!item.done">
